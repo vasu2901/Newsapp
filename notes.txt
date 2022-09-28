@@ -1,0 +1,13 @@
+Lifecycle of Component
+The series of events that happen from the mounting of the component to its Unmounting.
+Mounting - Birth of Component
+Update  - Growth of component
+Unmounting - Death of Component
+
+
+render()
+It used to render HTML of the component in react. This method is required for a class based
+component to render the DOM. It runs during the mounting and updating your component. It should 
+be pure i.e, you can't modify states inside it.
+    
+
