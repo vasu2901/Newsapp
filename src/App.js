@@ -9,16 +9,19 @@ import {
 } from "react-router-dom"
 import LoadingBar from "react-top-loading-bar"
 export default class App extends Component {
-  apikey = process.env.REACT_APP_NEWS_API
+
+  
+  apikey = 'cb24506b5f17478aa39f6506b69be1bb'
   state = {
-    progress: 55
+    progress: 55,
   }
   setProgress = (progress) =>{
     this.setState({
-      progress: progress
+      progress: progress    
     })
-  }
+  };
   render() {
+    console.log(process.env.REACT_APP_NEWS_API)
     
     return (
       <div>
@@ -28,9 +31,9 @@ export default class App extends Component {
       height={3}
         progress={this.state.progress} />
       <Routes>
-      <Route path = "/" element={ <News setProgress={this.setProgress} apikey={this.apikey} key="general"  country="in" category="general"/>} ></Route>
-      <Route path = "/" element={<News setProgress={this.setProgress} apikey={this.apikey} key="home"  country="in" category="general"/>}> </Route>
-      <Route path = "/business" element={<News setProgress={this.setProgress}  apikey={this.apikey} key="business"  country="in" category="business"/>}/>
+      <Route path = "/" element={ <News setProgress={this.setProgress} apikey={this.apikey} key="general"  country="in" category='general' />} ></Route>
+      <Route path = "/" element={<News setProgress={this.setProgress} apikey={this.apikey} key="home"  country="in" category='general'/>}> </Route>
+      <Route path = "/business" element={<News setProgress={this.setProgress}  apikey={this.apikey} key="business"  country="in" category='business'/>}/>
       <Route path = "/entertainment" element={<News setProgress={this.setProgress} apikey={this.apikey} key="entertainment"  country="in" category="entertainment"/>}/>
       <Route path = "/health" element={<News setProgress={this.setProgress}  apikey={this.apikey} key="health"  country="in" category="health"/>}/>
       <Route path = "/sports" element={<News setProgress={this.setProgress} apikey={this.apikey} key="sports"  country="in" category="sports"/>}/>

@@ -2,44 +2,45 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 export class Navbar extends Component {
-
-    render() {
+    render(props) {
+        console.log(this.props.category);
         return (
             <div>
-                <nav className="navbar navbar-expand-lg bg-primary" >
+                <nav className="navbar navbar-expand-lg bg-dark" >
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/" style={{color: 'white'}}>NewsMonk </Link>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon" style={{color: 'white'}}></span>
+                        <Link className="navbar-brand" to="/" style={{ color: 'white', fontFamily: "cursive" }}>NewsMonk </Link>
+                        <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon " style={{ color: 'white' }}></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/" style={{color: 'white'}}>General</Link>
-                                </li> 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/business" style={{color: 'white'}}>Business</Link>
+                                    <Link className="nav-link" to="/" id=" nav-general" style={{ color: 'white', fontFamily: "cursive" }}>General</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/entertainment" style={{color: 'white'}}>Entertainment</Link>
+                                    <Link className="nav-link" to="/business" id=" nav-business" style={{ color: 'white', fontFamily: "cursive" }}>Business</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/health" style={{color: 'white'}}>Health</Link>
+                                    <Link className="nav-link" to="/entertainment" id=" nav-entertainment" style={{ color: 'white', fontFamily: "cursive" }}>Entertainment</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/sports" style={{color: 'white'}}>Sports</Link>
+                                    <Link className="nav-link" to="/health" id=" nav-health" style={{ color: 'white', fontFamily: "cursive" }}>Health</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/science" style={{color: 'white'}}>Science</Link>
+                                    <Link className="nav-link" to="/sports" id=" nav-sports" style={{ color: 'white', fontFamily: "cursive" }}>Sports</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/technology" style={{color: 'white'}}>Technology</Link>
+                                    <Link className="nav-link" to="/science" id=" nav-science" style={{ color: 'white', fontFamily: "cursive" }}>Science</Link>
                                 </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/technology" id=" nav-technology" style={{ color: 'white', fontFamily: "cursive" }}>Technology</Link>
+                                </li>
+                                
                             </ul>
                         </div>
                     </div>
                 </nav>
-                
+
             </div>
         )
     }
