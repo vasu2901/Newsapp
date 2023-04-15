@@ -21,7 +21,7 @@ export default class App extends Component {
     })
   };
   render() {
-    console.log(process.env.REACT_APP_NEWS_API)
+    console.log('cb24506b5f17478aa39f6506b69be1bb')
     
     return (
       <div>
